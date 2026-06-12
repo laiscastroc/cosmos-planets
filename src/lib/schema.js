@@ -1,0 +1,30 @@
+import {
+  boolean,
+  integer,
+  pgTable,
+  real,
+  serial,
+  text,
+  timestamp,
+  varchar,
+} from "drizzle-orm/pg-core";
+
+export const planets = pgTable("planets", {
+  id: serial("id").primaryKey(),
+  name: varchar("name", { length: 100 }).notNull().unique(),
+  type: varchar("type", { length: 60 }).notNull(),
+  starSystem: varchar("star_system", { length: 150 }).notNull(),
+  distanceFromSun: varchar("distance_from_sun", { length: 60 }).notNull(),
+  diameter: integer("diameter"),
+  moons: integer("moons").notNull().default(0),
+  orbitalPeriod: real("orbital_period").notNull(),
+  surfaceTemp: integer("surface_temp").notNull(),
+  description: text("description").notNull(),
+  shortDesc: varchar("short_desc", { length: 255 }).notNull(),
+  curiosityTag: varchar("curiosity_tag", { length: 60 }).notNull(),
+  glowColor: varchar("glow_color", { length: 20 }).notNull(),
+  visualStyle: text("visual_style").notNull(),
+  hasRings: boolean("has_rings").notNull().default(false),
+  createdAt: timestamp("created_at").defaultNow(),
+  imgUrl: varchar("img_url", { length: 255 }),
+});

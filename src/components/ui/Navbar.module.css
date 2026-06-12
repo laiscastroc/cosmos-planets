@@ -1,0 +1,113 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.25rem 0;
+  transition: background 0.3s ease, padding 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background: rgba(3, 4, 10, 0.85);
+  backdrop-filter: blur(12px);
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--white);
+}
+
+.logoIcon {
+  color: var(--accent-nova);
+  font-size: 1.4rem;
+  animation: spin-slow 12s linear infinite;
+  display: inline-block;
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 0.25rem;
+}
+
+.link {
+  display: block;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--star-mid);
+  transition: color var(--transition), background var(--transition);
+}
+
+.link:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.active {
+  color: var(--white);
+  background: rgba(91, 156, 246, 0.15);
+  border: 1px solid rgba(91, 156, 246, 0.3);
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--star-bright);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 640px) {
+  .burger { display: flex; }
+
+  .links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(3, 4, 10, 0.97);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    pointer-events: none;
+  }
+
+  .links.open {
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  .link { font-size: 1.25rem; padding: 0.75rem 2rem; }
+}

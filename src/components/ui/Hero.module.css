@@ -1,0 +1,102 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  top: -200px;
+  right: -200px;
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 40% 40%,
+    rgba(168, 85, 247, 0.18) 0%,
+    rgba(91, 156, 246, 0.12) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: pulse-glow 6s ease-in-out infinite;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
+  max-width: 680px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-nova);
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1.0;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+}
+
+.gradient {
+  background: linear-gradient(135deg, var(--accent-pulsar), var(--accent-nebula));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--star-mid);
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary,
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.btnPrimary {
+  background: var(--accent-pulsar);
+  color: var(--void);
+}
+
+.btnPrimary:hover {
+  background: #7ab3fa;
+  transform: translateY(-2px);
+}
+
+.btnSecondary {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btnSecondary:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}

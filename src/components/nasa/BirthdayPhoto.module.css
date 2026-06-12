@@ -1,0 +1,137 @@
+.wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.header {
+  margin-bottom: 2.5rem;
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-nova);
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.sub {
+  color: var(--star-mid);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.form {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.input {
+  flex: 1;
+  min-width: 200px;
+  background: rgba(15, 27, 45, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  color: var(--white);
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+  color-scheme: dark;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent-pulsar);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  background: var(--accent-pulsar);
+  color: var(--void);
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: all var(--transition);
+}
+
+.btn:hover:not(:disabled) {
+  background: #7ab3fa;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.error {
+  padding: 1rem 1.25rem;
+  background: rgba(248, 113, 113, 0.1);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: var(--radius-md);
+  color: #fca5a5;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.result {
+  animation: fade-in-up 0.4s ease;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.image {
+  object-fit: cover;
+}
+
+.meta {
+  padding: 0 0.25rem;
+}
+
+.photoDate {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--accent-nova);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.photoTitle {
+  font-size: 1.5rem;
+  color: var(--white);
+  margin-bottom: 0.4rem;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: var(--star-dim);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.explanation {
+  color: var(--star-mid);
+  line-height: 1.75;
+  font-size: 0.95rem;
+}
